@@ -62,11 +62,20 @@ const Portfolio = () => {
           {
         title: "College Fest Management System",
         description: "A comprehensive web platform to manage college fests, enabling event creation, online registrations, scheduling, team management, and real-time updates for participants and organizers.",
-        tech: ["MongoDB", "React"],
+        tech: ["MongoDB", "React+Vite","Tailwind CSS", "Node.js"],
         github: "#",
         demo: "#",
         image: "🎉"
-      }
+      },
+
+      {
+  title: "Amazon Clone - frontend",
+  description: "A frontend e-commerce web application inspired by Amazon, featuring product listings, user authentication, shopping cart, and order management.",
+  tech: ["HTML", "CSS", "JavaScript"],
+  github: "#",
+  demo: "#",
+  image: "🛒"
+}
   
   ];
 
