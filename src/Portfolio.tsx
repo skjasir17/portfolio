@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Code, Brain, Database, Cpu, Github, Linkedin, Mail, ExternalLink, ChevronDown, Terminal, Zap, BookOpen, Award, User, Briefcase } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Code, Brain, Database, Cpu, Github, Linkedin, Mail, ExternalLink, ChevronDown, Zap, BookOpen, User, } from 'lucide-react';
 
 const Portfolio = () => {
-  const [activeSection, setActiveSection] = useState('hero');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isTyping, setIsTyping] = useState(true);
 
@@ -26,6 +25,7 @@ const Portfolio = () => {
 
   // Mouse tracking for interactive background
   useEffect(() => {
+    //@ts-ignore
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
@@ -76,7 +76,7 @@ const Portfolio = () => {
     { title: "Certification", description: "Full stack web development", icon: "🎓" },
     // { title: "Open Source", description: "Contributed to 15+ GitHub repositories", icon: "🌟" }
   ];
-
+  //@ts-ignore
   const ScrollSection = ({ children, id }) => (
     <section id={id} className="min-h-screen flex items-center justify-center p-8">
       {children}
@@ -206,7 +206,7 @@ const Portfolio = () => {
             Technical Skills
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {skills.map((skill, index) => (
+            {skills.map((skill) => (
               <div key={skill.name} className="group">
                 <div className="bg-white/5 p-6 rounded-xl border border-white/10 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
                   <div className="flex items-center space-x-3 mb-4">
